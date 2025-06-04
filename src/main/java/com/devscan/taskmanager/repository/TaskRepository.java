@@ -15,7 +15,7 @@ public class TaskRepository {
     public boolean delete(int id) {
         Iterator<Task> it = tasks.iterator();
         while (it.hasNext()) {
-            if (it.next().getId() != id) {
+            if (it.next().getId() == id) {
                 it.remove();
                 return true;
             }
